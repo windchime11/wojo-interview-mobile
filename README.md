@@ -1,50 +1,50 @@
-# Welcome to your Expo app 👋
+# wojo-interview
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to the EF World Journeys Mobile interview! We're excited for the opportunity to learn from you and to share with you a bit about how we conduct code reviews on our team. If you have any questions at all please don't hestitate to reach out and ask!
 
-## Get started
+## Overview
 
-1. Install dependencies
+This project is a simplified real world application for users wanting to book hotel rooms and specify their rooming preferences at the time of checkout.
 
-   ```bash
-   npm install
-   ```
+This repo uses:
 
-2. Start the app
+-   React Native
+-   Expo
+-   TypeScript
+-   Prettier
+-   Jest
 
-   ```bash
-    npx expo start
-   ```
+### Getting Started
 
-In the output, you'll find options to open the app in a
+This repo uses Turborepo and has a few aliased commands in the root package.json
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Run `npm i` in the root of the project
+2. Run `npm run dev` to start the server.
+    - The development server will start, and you'll see a QR code inside the terminal window.
+    - If you have your computer set up for mobile development, you can select either iOS with `i` or Android with `a`.
+    - If not, download Expo Go in the App Store. Once you have Expo Go on your phone, you can scan that QR code to open the app on the device. On Android, use the Expo Go > Scan QR code option. On iOS, use the default camera app.
+    - As a fallback, you can run this project as a web app by pressing `w` in the terminal. It will open the web app in the default web browser.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Additional commands
 
-## Get a fresh project
+See the package.json for additional commands such as linting, formatting, testing, etc.
 
-When you're ready, run:
+## Assignment
 
-```bash
-npm run reset-project
-```
+### User story:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+As a user, I'd like to be able to book more than 5 travelers at checkout.
 
-## Learn more
+### Description
 
-To learn more about developing your project with Expo, look at the following resources:
+Today in checkout users are able to book at most 5 people. As a result, the existing implementations have simple hard coded values to represent all possible room combinations.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Acceptance Criteria
 
-## Join the community
+-   Dynamically generate all possible combinations of rooms a group of X travelers could have.
+-   Refactor the components to clean up any loose types, poorly structured components, etc
+-   Write a test to cover the combination generation, using the provided Jest configuration or your testing framework of choice
 
-Join our community of developers creating universal apps.
+### Additional information
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Styling doesn't matter for this problem, clean code does
