@@ -21,6 +21,7 @@ export function Select<T extends string | number>({ items, onChange, value, labe
                 items={items}
                 setOpen={setOpen}
                 setValue={onChange}
+                listMode="SCROLLVIEW"
             />
         </>
     );
