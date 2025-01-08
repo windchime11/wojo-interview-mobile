@@ -47,4 +47,5 @@ Today in checkout users are able to book at most 5 people. As a result, the exis
 
 ### Additional information
 
-Styling doesn't matter for this problem, clean code does
+- Fork the repo and be prepared to walk through your solution with our Engineers.
+- Styling doesn't matter for this problem, clean code does.
