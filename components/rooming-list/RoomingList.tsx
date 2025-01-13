@@ -1,29 +1,13 @@
+import { useRooms } from "@/hooks";
+import { configs, Room } from "@/models";
+import { RadioGroup } from "@/ui";
 import pluralize from "pluralize";
 import { StyleSheet, Text, View } from "react-native";
-import { RadioGroup } from "@/ui";
-import { useRooms } from "@/hooks";
-import { Room } from "@/app/rooming+api";
-
-type Combination = {
-    S?: number;
-    D?: number;
-    F?: number;
-    Q?: number;
-};
-type Config = Combination[][];
-const configs: Config = [
-    [],
-    [{ S: 1 }],
-    [{ S: 2 }, { D: 1 }],
-    [{ S: 3 }, { S: 1, D: 1 }, { F: 1 }],
-    [{ S: 4 }, { S: 2, D: 1 }, { D: 2 }, { F: 1, S: 1 }, { Q: 1 }],
-    [{ S: 5 }, { S: 3, D: 1 }, { D: 2, S: 1 }, { F: 1, D: 1 }, { F: 1, S: 2 }, { Q: 1, S: 1 }],
-];
 
 export type RoomingListProps = {
     nbTravelers: number;
     selectedId?: string;
-    setSelection: React.Dispatch<React.SetStateAction<string | undefined>>;
+    setSelection: any;
 };
 export const RoomingList: React.FC<RoomingListProps> = ({ nbTravelers, selectedId, setSelection }) => {
     const { rooms, loading } = useRooms();

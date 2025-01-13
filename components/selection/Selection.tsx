@@ -12,6 +12,6 @@ export const Selection: React.FC<SelectionProps> = ({ selection }) => {
 
 const styles = StyleSheet.create({
     text: {
-        marginBottom: 32,
+        marginTop: 32,
     },
 });
