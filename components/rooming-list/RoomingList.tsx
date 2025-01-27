@@ -5,12 +5,14 @@ import { Room } from "@/types/room-type";
 import { RadioGroup } from "@/ui";
 import pluralize from "pluralize";
 import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
 export type RoomingListProps = {
     nbTravelers: number;
     selectedId?: string;
     setSelection: any;
 };
+
 export const RoomingList: React.FC<RoomingListProps> = ({ nbTravelers, selectedId, setSelection }) => {
     const { rooms, loading } = useRooms();
     if (loading) {
