@@ -1,11 +1,9 @@
 import { useRooms } from "@/hooks";
-import { rooms } from "@/models";
 import { generateAllCombs } from "@/helper/config-generation";
 import { Room } from "@/types/room-type";
 import { RadioGroup } from "@/ui";
 import pluralize from "pluralize";
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
 
 export type RoomingListProps = {
     nbTravelers: number;

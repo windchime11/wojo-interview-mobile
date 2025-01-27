@@ -19,70 +19,70 @@ export function generateAllCombs(n: number) : Combination[] {
     const s3 = createMap(configsFor3)
     const s4 = createMap(configsFor4)
     let curr = createMap([])
-    let lastFour : Map<string, Combination>[] = [s1, s2, s3, s4];
+    const lastFour : Map<string, Combination>[] = [s1, s2, s3, s4];
     
     for ( let i : number = 5; i <= n; i++) {
         curr = createMap([])
 
         if ( lastFour[0] ) {
             for (const [_, value] of lastFour[0]) {
-                let c0 = {...value}
+                const c0 = {...value}
                 c0.S = c0.S ? c0.S + 4 : 4
                 addToMapIfAbsent(curr, c0)
 
-                let c1 = {...value}
+                const c1 = {...value}
                 c1.S = c1.S ? c1.S + 2 : 2
                 c1.D = c1.D ? c1.D + 1 : 1
                 addToMapIfAbsent(curr, c1)
 
-                let c2 = {...value}
+                const c2 = {...value}
                 c2.S = c2.S ? c2.S + 1 : 1
                 c2.F = c2.F ? c2.F + 1 : 1
                 addToMapIfAbsent(curr, c2)
 
-                let c3 = {...value}
+                const c3 = {...value}
                 c3.D = c3.D ? c3.D + 2 : 2
                 addToMapIfAbsent(curr, c3)
 
-                let c4 = {...value}
+                const c4 = {...value}
                 c4.Q = c4.Q ? c4.Q + 1 : 1
                 addToMapIfAbsent(curr, c4)
             }
         }
 
         if ( lastFour[1] ) {
-            for (const [key, value] of lastFour[1]) {
+            for (const [_, value] of lastFour[1]) {
 
-                let c0 = {...value}
+                const c0 = {...value}
                 c0.S = c0.S ? c0.S + 3 : 3
                 addToMapIfAbsent(curr, c0)
 
-                let c1 = {...value}
+                const c1 = {...value}
                 c1.S = c1.S ? c1.S + 1 : 1
                 c1.D = c1.D ? c1.D + 1 : 1
                 addToMapIfAbsent(curr, c1)
 
-                let c2 = {...value}
+                const c2 = {...value}
                 c2.F = c2.F ? c2.F + 1 : 1
                 addToMapIfAbsent(curr, c2)
             }
         }
 
         if ( lastFour[2] ) {
-            for (const [key, value] of lastFour[2]) {
-                let c1 = {...value}
+            for (const [_, value] of lastFour[2]) {
+                const c1 = {...value}
                 c1.S = c1.S ? c1.S + 2 : 2
                 addToMapIfAbsent(curr, c1)
 
-                let c2 = {...value}
+                const c2 = {...value}
                 c2.D = c2.D ? c2.D + 1 : 1
                 addToMapIfAbsent(curr, c2)
             }
         }
         
         if ( lastFour[3] ) {
-            for (const [key, value] of lastFour[3]) {
-                let c = {...value}
+            for (const [_, value] of lastFour[3]) {
+                const c = {...value}
                 c.S = c.S ? c.S + 1 : 1
                 addToMapIfAbsent(curr, c)
             };
@@ -103,7 +103,7 @@ function createMap(obj: Combination[]) : Map<string, Combination>{
     return myMap
 }
 
-function sortProperties(obj: any): any {
+function sortProperties(obj: any) {
     const sortedKeys = Object.keys(obj).sort();
 
     const sortedObj = sortedKeys.reduce((acc, key) => {

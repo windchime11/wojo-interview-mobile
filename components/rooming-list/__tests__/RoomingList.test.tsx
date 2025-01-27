@@ -1,6 +1,5 @@
 import { render, waitFor } from "@testing-library/react-native";
 import { RoomingList } from "../RoomingList";
-import React from "react";
 
 jest.mock("@/hooks", () => ({
     useRooms: jest.fn(() => ({

@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { RoomingList, Selection, SelectTravelers } from "../components";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Stack } from "expo-router";
 
 export default function Index() {
