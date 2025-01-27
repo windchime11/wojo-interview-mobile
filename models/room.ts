@@ -1,27 +1,4 @@
-type Combination = {
-    S?: number;
-    D?: number;
-    F?: number;
-    Q?: number;
-};
-type Config = Combination[][];
-
-export type Room = {
-    capacity: number; // Number of travelers who can fit in the room
-    sku: string;
-    name: string;
-    description: string;
-    price: number;
-};
-
-export const configs: Config = [
-    [],
-    [{ S: 1 }],
-    [{ S: 2 }, { D: 1 }],
-    [{ S: 3 }, { S: 1, D: 1 }, { F: 1 }],
-    [{ S: 4 }, { S: 2, D: 1 }, { D: 2 }, { F: 1, S: 1 }, { Q: 1 }],
-    [{ S: 5 }, { S: 3, D: 1 }, { D: 2, S: 1 }, { F: 1, D: 1 }, { F: 1, S: 2 }, { Q: 1, S: 1 }],
-];
+import { Room } from "../types/room-type"
 
 export const rooms: Room[] = [
     {

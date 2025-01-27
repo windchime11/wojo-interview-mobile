@@ -1,5 +1,7 @@
 import { useRooms } from "@/hooks";
-import { configs, Room } from "@/models";
+import { rooms } from "@/models";
+import { generateAllCombs } from "@/helper/config-generation";
+import { Room } from "@/types/room-type";
 import { RadioGroup } from "@/ui";
 import pluralize from "pluralize";
 import { StyleSheet, Text, View } from "react-native";
@@ -18,7 +20,7 @@ export const RoomingList: React.FC<RoomingListProps> = ({ nbTravelers, selectedI
         return <Text>{`There are no rooms for ${nbTravelers} ${pluralize("traveler", nbTravelers)}`}</Text>;
     }
     const combos =
-        configs[nbTravelers]?.map((combination) =>
+        generateAllCombs(nbTravelers)?.map((combination) =>
             Object.entries(combination).reduce<{ count: number; room: Room }[]>((prev, [curr, count]) => {
                 const room = rooms?.find((room: Room) => room.sku === curr);
                 return room ? [...prev, { count, room }] : prev;
