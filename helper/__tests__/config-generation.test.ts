@@ -4,9 +4,9 @@ const config1 = [{ S: 1 }]
 const config2 = [{ S: 2 }, { D: 1 }]
 const config3 = [{ S: 3 }, { S: 1, D: 1 }, { F: 1 }]
 const config4 = [{ S: 4 }, { S: 2, D: 1 }, { D: 2 }, { F: 1, S: 1 }, { Q: 1 }]
-const config5 = [{ S: 5 }, { S: 3, D: 1 }, { F: 1, S: 2 }, { D: 2, S: 1 }, { Q: 1, S: 1 }, { D: 1, F: 1 }]
-const config6 = [{ S: 6 }, {D: 1, S: 4}, { F: 1, S: 3 }, { D: 2, S: 2 }, { Q: 1, S: 2 }, { D: 1, F: 1, S: 1 },
- {D: 3}, {D: 1, Q: 1}, {F: 2}]
+const config5 = [{ Q: 1, S: 1 }, { F: 1, S: 2 }, { D: 1, F: 1 }, { S: 3, D: 1 },  { D: 2, S: 1 }, { S: 5 }]
+const config6 = [{ Q: 1, S: 2 }, {D: 1, Q: 1}, { F: 1, S: 3 }, { D: 1, F: 1, S: 1 }, {F: 2}, {D: 1, S: 4}, { D: 2, S: 2 },
+ {D: 3}, { S: 6 }]
 
 describe('generateAllCombs', () => {
     describe('generate', () => {

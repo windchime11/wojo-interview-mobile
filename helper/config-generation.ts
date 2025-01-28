@@ -26,23 +26,7 @@ export function generateAllCombs(n: number) : Combination[] {
 
         if ( lastFour[0] ) {
             for (const [_, value] of lastFour[0]) {
-                const c0 = {...value}
-                c0.S = c0.S ? c0.S + 4 : 4
-                addToMapIfAbsent(curr, c0)
 
-                const c1 = {...value}
-                c1.S = c1.S ? c1.S + 2 : 2
-                c1.D = c1.D ? c1.D + 1 : 1
-                addToMapIfAbsent(curr, c1)
-
-                const c2 = {...value}
-                c2.S = c2.S ? c2.S + 1 : 1
-                c2.F = c2.F ? c2.F + 1 : 1
-                addToMapIfAbsent(curr, c2)
-
-                const c3 = {...value}
-                c3.D = c3.D ? c3.D + 2 : 2
-                addToMapIfAbsent(curr, c3)
 
                 const c4 = {...value}
                 c4.Q = c4.Q ? c4.Q + 1 : 1
@@ -53,15 +37,6 @@ export function generateAllCombs(n: number) : Combination[] {
         if ( lastFour[1] ) {
             for (const [_, value] of lastFour[1]) {
 
-                const c0 = {...value}
-                c0.S = c0.S ? c0.S + 3 : 3
-                addToMapIfAbsent(curr, c0)
-
-                const c1 = {...value}
-                c1.S = c1.S ? c1.S + 1 : 1
-                c1.D = c1.D ? c1.D + 1 : 1
-                addToMapIfAbsent(curr, c1)
-
                 const c2 = {...value}
                 c2.F = c2.F ? c2.F + 1 : 1
                 addToMapIfAbsent(curr, c2)
@@ -70,9 +45,6 @@ export function generateAllCombs(n: number) : Combination[] {
 
         if ( lastFour[2] ) {
             for (const [_, value] of lastFour[2]) {
-                const c1 = {...value}
-                c1.S = c1.S ? c1.S + 2 : 2
-                addToMapIfAbsent(curr, c1)
 
                 const c2 = {...value}
                 c2.D = c2.D ? c2.D + 1 : 1
